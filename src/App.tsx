@@ -1,13 +1,19 @@
-import { Button} from './components/Button'
+import { useState, createContext, useEffect } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom'
+
+import { Home } from './pages/Home';
+import { NewRoom } from './pages/NewRoom';
+import { AuthContextProvider}from './contexts/AuthContexts'
+
 function App() {
+ 
   return (
-    <div>
-    <h1> olá doido</h1>
-    <Button text='botao 1'/>
-    <Button text='botao 2'/>
-    <Button text='botao 3'/>
-    <Button text='botao 4'/>
-    </div>
+    <BrowserRouter>
+      <AuthContextProvider>
+        <Route path='/' exact component={Home} />
+        <Route path='/rooms/new' component={NewRoom} />
+      </AuthContextProvider>
+    </BrowserRouter>
   );
 }
 
