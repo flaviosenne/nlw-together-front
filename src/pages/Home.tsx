@@ -35,6 +35,8 @@ export function Home(){
 
         if(!roomRef.exists()) return alert('sala não existe')
 
+        if(roomRef.val().endedAt()) alert('Sala já fechada')
+        
         history.push(`/rooms/${roomCode}`)
     }
 
