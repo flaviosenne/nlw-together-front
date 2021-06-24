@@ -7,11 +7,19 @@
             max-width: 1220px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
 
             > img{
                 max-height: 45px;
+            } 
+            
+            > div{
+                display: flex;
+                gap: 16px;
+                button{
+                    height: 40px;
+                }
             }
         }
     }
@@ -96,6 +104,10 @@
 
 
             }
+        }
+
+        .question-list{
+            margin-top: 32px;
         }
     }
 }
